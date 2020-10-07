@@ -31,17 +31,29 @@
 					</div>
 				</div>
 				<hr>
-				<div class="d-flex justify-content-between align-items-end header-nav">
+				<div class="d-flex justify-content-between align-items-end header-nav w-100">
 					<a href="" class="header-link-home">
 						<img src="https://ksh.vn/images/logo.jpg" alt="">
 					</a>
-					<ul class="header-list d-flex justify-content-between align-items-center">
-						<li class="header-item"><a href="#" class="header-link">Trang chủ</a></li>
-						<li class="header-item"><a href="#" class="header-link">Sản phẩm</a></li>
-						<li class="header-item"><a href="#" class="header-link">Tin tức</a></li>
-						<li class="header-item"><a href="#" class="header-link">Dự án</a></li>
-						<li class="header-item"><a href="#" class="header-link">Giới thiệu</a></li>
-					</ul>
+					<div>
+						<div>
+							<div class="d-flex justify-content-between">
+								<div></div>
+								<form class="form-search form-search-1 hidden">
+									<input type="text" placeholder="Type for search" name="">
+									<button><i style="color: #ccc" class="fas fa-search"></i></button>
+								</form>
+							</div>
+							<ul class="header-list d-flex justify-content-between align-items-center">
+								<li class="header-item"><a href="#" class="header-link">Trang chủ</a></li>
+								<li class="header-item"><a href="#" class="header-link">Sản phẩm</a></li>
+								<li class="header-item"><a href="#" class="header-link">Tin tức</a></li>
+								<li class="header-item"><a href="#" class="header-link">Dự án</a></li>
+								<li class="header-item"><a href="#" class="header-link">Giới thiệu</a></li>
+							</ul>
+						</div>
+					</div>
+					
 				</div>
 
 				
@@ -462,5 +474,18 @@
     prevArrow: false,
     nextArrow: false
   });
+</script>
+<script type="text/javascript">
+	$(window).scroll(function () {
+	var e = $(window).scrollTop();
+	if (e > 300) {
+		$(".header-nav").addClass('p-fix');
+		$(".form-search-1").removeClass('hidden');
+	} else {
+		$(".header-nav").removeClass('p-fix');
+		$(".form-search-1").addClass('hidden');
+
+	}
+});
 </script>
 </html>

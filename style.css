@@ -89,8 +89,15 @@ a:hover{
     background: rgba(0,0,0,0.2);
 
 }
+.header-nav{
+	display: flex;
+justify-content: space-between;
+}
 .home-cooperator img{
 	width: 100%;
+}
+.p-lr{
+	
 }
 .slide-pro h3{
 	font-size: 1.2rem;
@@ -99,6 +106,21 @@ a:hover{
 	color: black;
 	
 	text-transform: uppercase;
+}
+.p-fix{
+	position: fixed;
+	top: 0;
+	padding: 8px 40px;
+	right: 0;
+	left: 0;
+	background: white;
+	box-shadow: 1px 2px 4px #ccc;
+	z-index: 9;
+	
+	align-items: center;
+}
+.hidden{
+	display: none;
 }
 .slide-pro a img{
 	height: 250px;
